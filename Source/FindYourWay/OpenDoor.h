@@ -30,6 +30,7 @@ private:
 	float InitialYaw;
 	float CurrentYaw;
 
+	//OpenDoor Angle
 	UPROPERTY(EditAnywhere)
 	float TargetYaw = 90.f;
 

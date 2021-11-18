@@ -9,8 +9,6 @@ UWorldPosition::UWorldPosition()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
 }
 
 
@@ -21,10 +19,11 @@ void UWorldPosition::BeginPlay()
 
 	FString ObjectName = GetOwner()->GetName();
 	FString ObjectPosition = GetOwner()->GetActorLocation().ToString();
-	// ...
+
+	// printing Actor name and Actor position on output log
 	UE_LOG(LogTemp, Warning, TEXT("Object %s has position %s "), *ObjectName, *ObjectPosition);
 
-	//compile time try
+	// this prints Text in grey color
 	UE_LOG(LogTemp, Display, TEXT("Just a try"));
 }
 
@@ -33,7 +32,5 @@ void UWorldPosition::BeginPlay()
 void UWorldPosition::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
 }
 
