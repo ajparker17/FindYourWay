@@ -32,11 +32,16 @@ private:
 	void FindPhysicsHandle();
 	void SetUpComponent();
 	FHitResult GetFirstPhysicsBodyInReach() const;
+	FVector GetPlayersReach() const;
+	FVector GetPlayersWorldPos() const;
 
 	UPROPERTY(EditAnywhere)
 	float Reach = 100.f;
 
+	UPROPERTY()
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+
+	UPROPERTY()
 	UInputComponent* InputComponent = nullptr;
 		
 };
